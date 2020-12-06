@@ -1,0 +1,22 @@
+<table class="container table table-bordered mt-2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <th>Purchase Price</th>
+      <th>Sell Price</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doc of inventory_data">
+      <td>{{ doc.data().name }}</td>
+      <td>{{ doc.data().category }}</td>
+      <td>{{ doc.data().quantity }}</td>
+      <td>{{ doc.data().purchase_price }}</td>
+      <td>{{ doc.data().sell_price }}</td>
+      <td><button type="button" class="btn btn-link" (click)="edit(doc)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>

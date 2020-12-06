@@ -1,0 +1,37 @@
+[debug] [2020-12-05T12:43:06.578Z] ----------------------------------------------------------------------
+[debug] [2020-12-05T12:43:06.582Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-12-05T12:43:06.582Z] CLI Version:   6.5.3
+[debug] [2020-12-05T12:43:06.582Z] Platform:      win32
+[debug] [2020-12-05T12:43:06.583Z] Node Version:  v12.18.2
+[debug] [2020-12-05T12:43:06.584Z] Time:          Sat Dec 05 2020 18:13:06 GMT+0530 (India Standard Time)
+[debug] [2020-12-05T12:43:06.584Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-12-05T12:43:06.598Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-05T12:43:06.598Z] > authorizing via signed-in user
+[debug] [2020-12-05T12:43:06.598Z] [iam] checking project billing-software-41641 for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update"]
+[debug] [2020-12-05T12:43:06.601Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/billing-software-41641:testIamPermissions  
+
+[debug] [2020-12-05T12:43:08.556Z] <<< HTTP RESPONSE 200
+[debug] [2020-12-05T12:43:08.566Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/billing-software-41641  
+ 
+[debug] [2020-12-05T12:43:09.036Z] <<< HTTP RESPONSE 200
+[debug] [2020-12-05T12:43:09.037Z] [WARNING] Unable to fetch default resources. Falling back to project id (billing-software-41641)
+[info] 
+[info] === Deploying to 'billing-software-41641'...
+[info] 
+[info] i  deploying database, hosting
+[info] i  database: checking rules syntax...
+[debug] [2020-12-05T12:43:09.054Z] >>> HTTP REQUEST PUT https://billing-software-41641.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2020-12-05T12:43:10.588Z] <<< HTTP RESPONSE 404
+[debug] [2020-12-05T12:43:10.588Z] <<< HTTP RESPONSE BODY {
+  "error" : "404 Not Found"
+}
+
+[error] 
+[error] Error: Unexpected error while deploying database rules.

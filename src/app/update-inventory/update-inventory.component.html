@@ -1,0 +1,55 @@
+<div class="container-fluid">
+    <form [formGroup]="updateinventoryForm">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault01">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="name"
+            [(ngModel)]="inventoryForm['name']"
+          />
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault02">Category</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="category"
+            [(ngModel)]="inventoryForm['category']"
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault03">Quantity</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="quantity"
+            [(ngModel)]="inventoryForm['quantity']"
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">Purchase Price</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="purchase_price"
+            [(ngModel)]="inventoryForm['purchase_price']"
+          />
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault05">Sell Price</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="sell_price"
+            [(ngModel)]="inventoryForm['sell_price']"
+          />
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit" (click)="update()">Submit form</button>
+    </form>
+  </div>
+  

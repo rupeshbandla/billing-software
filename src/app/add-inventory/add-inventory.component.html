@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <form [formGroup]="inventoryForm">
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault01">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault01"
+          required
+          formControlName="name"
+        />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault02">Category</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault02"
+          required
+          formControlName="category"
+        />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationDefault03">Quantity</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault03"
+          required
+          formControlName="quantity"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault04">Purchase Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault04"
+          required
+          formControlName="purchase_price"
+        />
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationDefault05">Sell Price</label>
+        <input
+          type="text"
+          class="form-control"
+          id="validationDefault05"
+          required
+          formControlName="sell_price"
+        />
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="addInventory()">Submit form</button>
+  </form>
+</div>
